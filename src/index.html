@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../dist/output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+
+    <style>
+      @keyframes carouselAnim {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(calc(-100% + (6*300px)));
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container .carousel-items {
+    animation: carouselAnim 60s infinite alternate linear;
+  }
+  @keyframes carouselAnim {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(calc(-100% + (5*300px)));
+    }
+  }
+}
+
+.carousel-focus:hover {
+  transition: all 0.8s;
+  transform: scale(1.1);
+}
+    </style>
+
+</head>
+<body>
+    <!-- Topbar -->
+    <div class="bg-top-bg bg-no-repeat bg-cover bg-center">
+        <div class="container mx-auto">
+            <div class="flex flex-col items-center md:flex-row justify-center mx-4 py-2">
+                <div class="text-white space-x-4">
+                    <span href="#">
+                        New Looks
+                    </span>
+                    <span>
+                        Same us.
+                    </span>
+                    <span>
+                       Say hi to all new CheapReliableEssay
+                    </span>
+                </div>               
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="w-full text-gray-700 dark-mode:text-gray-200 dark-mode:bg-gray-800">
+        <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-2 mx-auto lg:items-center lg:justify-between lg:flex-row ">
+            <div class="p-4 flex flex-row items-center justify-between">
+                <a class="flex items-center py-4 px-2" href="#">
+                    <img src="../imgs/logo.jpg" alt="Logo" class="h-16 mt-3">
+                </a>
+                <button class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" style="display: none;"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 lg:pb-0 hidden lg:flex lg:justify-end lg:flex-row">
+
+                <a href="#" class="block font-semibold text-secondary hover:text-primary-light py-2 px-6">Our Writers</a>
+
+                <a href="#" class="block font-semibold text-secondary hover:text-primary-light py-2 px-6">How it works</a>
+
+                <a href="#" class="block font-semibold text-secondary hover:text-primary-light py-2 px-6">Latest Orders</a>
+               
+                <a href="#" class="block font-semibold text-secondary hover:text-primary-light py-2 px-6">Our custom writing services</a>
+             
+                <a href="#" class="block font-semibold text-secondary hover:text-primary-light py-2 px-6">FAQ</a>
+
+                <a href="#" class="block font-semibold text-secondary hover:text-primary-light py-2 px-6">Blogs</a>
+
+                <div class="flex flex-col md:flex-row  md:items-center my-3 mx-3 lg:my-0 md:space-x-1 space-y-2 md:space-y-0 ">
+                    <a href="#" class="btn bg-black text-white rounded-full">
+                        My Account
+                    </a>
+                    <a href="#" class="pb-4 pt-2 px-4 primary-color text-center rounded-full text-white " style="background-color: rgb(255, 255, 255, 0.6);">
+                      <span> 24Hours</span> 
+                      <sub class="block ml-6 text-md">open</sub>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="h-full mx-auto px-5 bg-hero-bg bg-no-repeat bg-cover">    
+
+       <div class=" pt-44 flex flex-col items-center justify-center lg:flex-row lg:space-x-20">
+
+          <div class="hidden md:block w-[50%]"></div>
+         
+          <div class="flex flex-col mb-16 items-center text-center lg:flex-grow lg:w-[40%] lg:text-left lg:mb-0 ">
+            <div class="md:w-1/2 lg:w-full">
+              <h1 class="text-black-500 text-2xl md:text-3xl lg:text-4xl font-bold pb-4">Cheap Essay Writing 
+                Service That Bypasses 
+                Competitors in Its 
+                Affordabilit</h1>
+      
+              <p class="text-black text-2xl md:text-lg lg:text-base pb-4">Get cheap essay help here. You don’t need to worry about spending all of 
+                your money on writing services anymore — hire one of our experienced 
+                writers and get help with any paper type! Our assistance is cheaper than 
+                affordable to any student. Check out our amazing reduced prices!</p>
+      
+              <div class="flex flex-col items-center mx-5 sm:flex-row sm:justify-center md:flex-row lg:flex-row">
+           
+                <div class="p-5">
+                  <img src="../imgs/sitejabbarimg.svg" alt="flag" class="mx-auto w-9">
+                  <span class="mb-2 sm:mb-0 md:mb-2 lg:mb-0 focus:outline-none hover:text-blue-400 text-lg  ml-4">Sitejabbar</span>
+                  <ul class="flex justify-center">
+                      <li class="mr-1">4.9</li>
+                      <li class="my-auto text-cyan-600">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                          <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                          </path>
+                        </svg>
+                      </li>
+                      <li class="my-auto">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                          <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                          </path>
+                        </svg>
+                      </li>
+                      <li class="my-auto">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                          <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                          </path>
+                        </svg>
+                      </li>
+                      <li class="my-auto">
+                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                          <path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                          </path>
+                        </svg>
+                      </li>
+                      <li class="my-auto">
+                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                          <path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                          </path>
+                        </svg>
+                      </li>
+                    </ul>              
+                </div>
+
+                <div class="p-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 172 172" style=" fill:#000000;" class="mx-auto w-9"><defs><linearGradient x1="32.28225" y1="22.79" x2="136.49633" y2="162.20317" gradientUnits="userSpaceOnUse" id="color-1_8ggStxqyboK5_gr1"><stop offset="0" stop-color="#18a878"></stop><stop offset="1" stop-color="#31dcb9"></stop></linearGradient></defs><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="url(#color-1_8ggStxqyboK5_gr1)"><path d="M89.27158,18.58317l19.6295,44.032l47.93783,5.06325c3.08525,0.32608 4.32508,4.1495 2.021,6.22425l-35.80825,32.26792l10.00108,47.16025c0.645,3.03508 -2.60867,5.3965 -5.29617,3.8485l-41.75658,-24.09075l-41.75658,24.08717c-2.6875,1.548 -5.93758,-0.81342 -5.29617,-3.8485l10.00108,-47.16025l-35.80825,-32.26792c-2.30408,-2.07475 -1.06067,-5.89817 2.021,-6.22425l47.93783,-5.06325l19.6295,-44.032c1.26133,-2.83083 5.28183,-2.83083 6.54317,0.00358z"></path></g></g></svg>
+                    
+                    <span class="mb-2 sm:mb-0 md:mb-2 lg:mb-0 focus:outline-none hover:text-blue-400 text-lg  ml-4">Trustpilot</span>
+                    <ul class="flex justify-center">
+                      <li class="mr-1">4.9</li>
+                      <li class="my-auto text-cyan-600">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                          <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                          </path>
+                        </svg>
+                      </li>
+                      <li class="my-auto">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                          <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                          </path>
+                        </svg>
+                      </li>
+                      <li class="my-auto">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                          <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                          </path>
+                        </svg>
+                      </li>
+                      <li class="my-auto">
+                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                          <path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                          </path>
+                        </svg>
+                      </li>
+                      <li class="my-auto">
+                        <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                          <path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                          </path>
+                        </svg>
+                      </li>
+                    </ul>
+                </div>
+
+                <div class="p-5">
+                  <img src="../imgs/bark.jpg" alt="flag" class="mx-auto w-40">
+                  <ul class="flex justify-center">
+                    <li class="mr-1">4.9</li>
+                    <li class="my-auto text-cyan-600">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                        </path>
+                      </svg>
+                    </li>
+                    <li class="my-auto">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                        </path>
+                      </svg>
+                    </li>
+                    <li class="my-auto">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                        </path>
+                      </svg>
+                    </li>
+                    <li class="my-auto">
+                      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                        </path>
+                      </svg>
+                    </li>
+                    <li class="my-auto">
+                      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="star" class="w-4 text-yellow-500" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path fill="currentColor" d="M528.1 171.5L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6zM388.6 312.3l23.7 138.4L288 385.4l-124.3 65.3 23.7-138.4-100.6-98 139-20.2 62.2-126 62.2 126 139 20.2-100.6 98z">
+                        </path>
+                      </svg>
+                    </li>
+                  </ul> 
+                </div>
+      
+              </div>
+      
+            </div>
+          </div>
+      
+          <div class=" lg:w-[70%]">
+      
+          <form class="primary-color shadow-2xl p-8 flex flex-col md:ml-auto w-full relative z-10  mb-16">
+      
+            <p class="pb-4">Order your paper</p>
+              <div class="relative mb-4">
+                <label>Name:</label>
+                <input type="text" name="name" class="w-full text-white rounded border border-gray-300 bg-gray-50  focus:border-pink-500 focus:ring-2 focus:ring-red-200 text-base h-12 outline-none py-2 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="Full Name">
+              </div>
+      
+              <div class="relative mb-4">
+                <label>Email:</label>
+                <input type="text" name="email" class="w-full text-gray-700 rounded border border-gray-300 bg-gray-50  focus:border-pink-500 focus:ring-2 focus:ring-red-200 text-base h-12 outline-none py-2 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="Email">
+              </div>
+      
+              <div class="relative mb-4">
+                <label>Phone Number:</label>
+                <input type="tel" name="phone" class="w-full text-gray-700 rounded border border-gray-300 bg-gray-50  focus:border-pink-500 focus:ring-2 focus:ring-red-200 text-base h-12 outline-none py-2 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="Phone Number">
+              </div>
+
+              <div class="relative mb-4">
+                <input type="tel" name="phone" class="w-full text-gray-700 rounded border border-gray-300 bg-gray-50  focus:border-pink-500 focus:ring-2 focus:ring-red-200 text-base h-12 outline-none py-2 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="Phone Number">
+              </div>
+      
+              <a type="Submit" class="text-white text-center bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg w-auto" href="/order">Sign Up</a>
+          </form>
+          
+          </div>
+          
+          <div class="w-[10%]"></div>
+
+        </div> 
+    
+    </div>
+    <div class="primary-color h-4"></div>
+
+    <!-- Section2 -->
+    <div class=" grid grid-cols-1 sm:grid-cols-2 mx-auto py-10 lg:px-[22rem]">
+      
+      <div class="mx-auto">
+        <img src="../imgs/boy.svg" class="h-80">
+      </div>
+     
+      <div class="space-y-10 mx-auto">
+
+        <div class="flex space-x-4">
+
+          <div>
+            <img src="../imgs/icon3.svg" class="h-20">
+          </div>
+
+          <div>
+            <p class="text-center text-3xl text-primary-two font-bold">9.62 / 10</p>
+            <p>Average quality score</p>
+          </div>
+
+        </div>
+
+        <div class="flex space-x-4 lg:ml-12">
+
+          <div>
+            <img src="../imgs/icon2.svg" class="h-20">
+          </div>
+
+          <div>
+            <p class="text-center text-3xl text-primary-two font-bold">242</p>
+            <p>Writers active</p>
+          </div>
+
+        </div>
+
+        <div class="flex space-x-4 lg:ml-20">
+
+          <div>
+            <img src="../imgs/icon1.svg" class="h-16">
+          </div>
+
+          <div>
+            <p class="text-center text-3xl text-primary-two font-bold">109592</p>
+            <p>visitors</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Testimonial -->
+    <div class="px-4 lg:px-40">
+      <h4 class="primary-heading">Meet Our Team of Proficient Essay Writers for Hire</h4>
+      <p class="primary-text text-center">When it comes to looking for essay help online, every student aspires to any top writer to curate their essays and papers. Scroll 
+        through the writer's profile to check what their satisfied customers say about them to get a clear view of their service</p>
+
+        <div class="leanding-normal tracking-wide">
+
+          <div class="container mx-auto w-full overflow-hidden relative">
+              <div class="w-full h-full absolute">
+                  <div class="w-1/4 h-full absolute z-50 left-0" ></div>
+                  <div class="w-1/4 h-full absolute z-50 right-0" ></div>
+              </div>
+      
+              <div class="carousel-items flex items-center justify-center" style="width: fit-content; animation: carouselAnim 10s infinite alternate linear;">
+      
+                  <div class="carousel-focus flex items-center flex-col relative bg-slate-100 mx-5 my-10 px-4 py-3 rounded-lg shadow-xl" style="width: 270px;">
+                      <!-- <svg class="fill-current text-primary-two hover:text-primary-one cursor-pointer h-12 w-12 absolute top-0 right-0 mt-2 -mr-5" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11.5 0C17.847 0 23 5.153 23 11.5S17.847 23 11.5 23 0 17.847 0 11.5 5.153 0 11.5 0zm0 1C17.295 1 22 5.705 22 11.5S17.295 22 11.5 22 1 17.295 1 11.5 5.705 1 11.5 1zm.5 10h6v1h-6v6h-1v-6H5v-1h6V5h1v6z"/></svg> -->
+                      <!-- <button class="absolute top-0 right-0 bg-black px-1 py-0 font-bold text-lg">+</button> -->
+                      
+                      <img class="h-16 w-16 rounded-full shadow-2xl" src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg" alt="Img">
+                      <span class="text-primary-two font-bold text-xl mt-3">Sup3r-Us3r</span>
+                      <p class="mt-3 text-gray-600 text-center">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quibusdam!"</p>
+                      <button class="mt-4 mb-2 bg-black px-12 py-1 text-gray-100 font-semibold hover:bg-primary-two focus:outline-none">Button</button>
+                  </div>
+      
+                  <div class="carousel-focus flex items-center flex-col relative bg-slate-100 mx-5 my-10 px-4 py-3 rounded-lg shadow-xl" style="width: 270px;">
+                      <!-- <svg class="fill-current text-primary-two hover:text-primary-one cursor-pointer h-12 w-12 absolute top-0 right-0 mt-2 -mr-5" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11.5 0C17.847 0 23 5.153 23 11.5S17.847 23 11.5 23 0 17.847 0 11.5 5.153 0 11.5 0zm0 1C17.295 1 22 5.705 22 11.5S17.295 22 11.5 22 1 17.295 1 11.5 5.705 1 11.5 1zm.5 10h6v1h-6v6h-1v-6H5v-1h6V5h1v6z"/></svg> -->
+                      <!-- <button class="absolute top-0 right-0 bg-black px-1 py-0 font-bold text-lg">+</button> -->
+                      
+                      <img class="h-16 w-16 rounded-full shadow-2xl" src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg" alt="Img">
+                      <span class="text-primary-two font-bold text-xl mt-3">Sup3r-Us3r</span>
+                      <p class="mt-3 text-gray-600 text-center">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quibusdam!"</p>
+                      <button class="mt-4 mb-2 bg-black px-12 py-1 text-gray-100 font-semibold hover:bg-primary-two focus:outline-none">Button</button>
+                  </div>
+      
+                  <div class="carousel-focus flex items-center flex-col relative bg-slate-100 mx-5 my-10 px-4 py-3 rounded-lg shadow-xl" style="width: 270px;">
+                      <!-- <svg class="fill-current text-primary-two hover:text-primary-one cursor-pointer h-12 w-12 absolute top-0 right-0 mt-2 -mr-5" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11.5 0C17.847 0 23 5.153 23 11.5S17.847 23 11.5 23 0 17.847 0 11.5 5.153 0 11.5 0zm0 1C17.295 1 22 5.705 22 11.5S17.295 22 11.5 22 1 17.295 1 11.5 5.705 1 11.5 1zm.5 10h6v1h-6v6h-1v-6H5v-1h6V5h1v6z"/></svg> -->
+                      <!-- <button class="absolute top-0 right-0 bg-black px-1 py-0 font-bold text-lg">+</button> -->
+                      
+                      <img class="h-16 w-16 rounded-full shadow-2xl" src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg" alt="Img">
+                      <span class="text-primary-two font-bold text-xl mt-3">Sup3r-Us3r</span>
+                      <p class="mt-3 text-gray-600 text-center">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quibusdam!"</p>
+                      <button class="mt-4 mb-2 bg-black px-12 py-1 text-gray-100 font-semibold hover:bg-primary-two focus:outline-none">Button</button>
+                  </div>
+      
+                  <div class="carousel-focus flex items-center flex-col relative bg-slate-100 mx-5 my-10 px-4 py-3 rounded-lg shadow-xl" style="width: 270px;">
+                      <!-- <svg class="fill-current text-primary-two hover:text-primary-one cursor-pointer h-12 w-12 absolute top-0 right-0 mt-2 -mr-5" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11.5 0C17.847 0 23 5.153 23 11.5S17.847 23 11.5 23 0 17.847 0 11.5 5.153 0 11.5 0zm0 1C17.295 1 22 5.705 22 11.5S17.295 22 11.5 22 1 17.295 1 11.5 5.705 1 11.5 1zm.5 10h6v1h-6v6h-1v-6H5v-1h6V5h1v6z"/></svg> -->
+                      <!-- <button class="absolute top-0 right-0 bg-black px-1 py-0 font-bold text-lg">+</button> -->
+                      
+                      <img class="h-16 w-16 rounded-full shadow-2xl" src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg" alt="Img">
+                      <span class="text-primary-two font-bold text-xl mt-3">Sup3r-Us3r</span>
+                      <p class="mt-3 text-gray-600 text-center">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quibusdam!"</p>
+                      <button class="mt-4 mb-2 bg-black px-12 py-1 text-gray-100 font-semibold hover:bg-primary-two focus:outline-none">Button</button>
+                  </div>
+      
+                  <div class="carousel-focus flex items-center flex-col relative bg-slate-100 mx-5 my-10 px-4 py-3 rounded-lg shadow-xl" style="width: 270px;">
+                      <!-- <svg class="fill-current text-primary-two hover:text-primary-one cursor-pointer h-12 w-12 absolute top-0 right-0 mt-2 -mr-5" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11.5 0C17.847 0 23 5.153 23 11.5S17.847 23 11.5 23 0 17.847 0 11.5 5.153 0 11.5 0zm0 1C17.295 1 22 5.705 22 11.5S17.295 22 11.5 22 1 17.295 1 11.5 5.705 1 11.5 1zm.5 10h6v1h-6v6h-1v-6H5v-1h6V5h1v6z"/></svg> -->
+                      <!-- <button class="absolute top-0 right-0 bg-black px-1 py-0 font-bold text-lg">+</button> -->
+                      
+                      <img class="h-16 w-16 rounded-full shadow-2xl" src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg" alt="Img">
+                      <span class="text-primary-two font-bold text-xl mt-3">Sup3r-Us3r</span>
+                      <p class="mt-3 text-gray-600 text-center">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quibusdam!"</p>
+                      <button class="mt-4 mb-2 bg-black px-12 py-1 text-gray-100 font-semibold hover:bg-primary-two focus:outline-none">Button</button>
+                  </div>
+                  
+                  <div class="carousel-focus flex items-center flex-col relative bg-slate-100 mx-5 my-10 px-4 py-3 rounded-lg shadow-xl" style="width: 270px;">
+                      <!-- <svg class="fill-current text-primary-two hover:text-primary-one cursor-pointer h-12 w-12 absolute top-0 right-0 mt-2 -mr-5" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11.5 0C17.847 0 23 5.153 23 11.5S17.847 23 11.5 23 0 17.847 0 11.5 5.153 0 11.5 0zm0 1C17.295 1 22 5.705 22 11.5S17.295 22 11.5 22 1 17.295 1 11.5 5.705 1 11.5 1zm.5 10h6v1h-6v6h-1v-6H5v-1h6V5h1v6z"/></svg> -->
+                      <!-- <button class="absolute top-0 right-0 bg-black px-1 py-0 font-bold text-lg">+</button> -->
+                      
+                      <img class="h-16 w-16 rounded-full shadow-2xl" src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg" alt="Img">
+                      <span class="text-primary-two font-bold text-xl mt-3">Sup3r-Us3r</span>
+                      <p class="mt-3 text-gray-600 text-center">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quibusdam!"</p>
+                      <button class="mt-4 mb-2 bg-black px-12 py-1 text-gray-100 font-semibold hover:bg-primary-two focus:outline-none">Button</button>
+                  </div>
+      
+                  <div class="carousel-focus flex items-center flex-col relative bg-slate-100 mx-5 my-10 px-4 py-3 rounded-lg shadow-xl" style="width: 270px;">
+                      <!-- <svg class="fill-current text-primary-two hover:text-primary-one cursor-pointer h-12 w-12 absolute top-0 right-0 mt-2 -mr-5" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11.5 0C17.847 0 23 5.153 23 11.5S17.847 23 11.5 23 0 17.847 0 11.5 5.153 0 11.5 0zm0 1C17.295 1 22 5.705 22 11.5S17.295 22 11.5 22 1 17.295 1 11.5 5.705 1 11.5 1zm.5 10h6v1h-6v6h-1v-6H5v-1h6V5h1v6z"/></svg> -->
+                      <!-- <button class="absolute top-0 right-0 bg-black px-1 py-0 font-bold text-lg">+</button> -->
+                      
+                      <img class="h-16 w-16 rounded-full shadow-2xl" src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg" alt="Img">
+                      <span class="text-primary-two font-bold text-xl mt-3">Sup3r-Us3r</span>
+                      <p class="mt-3 text-gray-600 text-center">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quibusdam!"</p>
+                      <button class="mt-4 mb-2 bg-black px-12 py-1 text-gray-100 font-semibold hover:bg-primary-two focus:outline-none">Button</button>
+                  </div>
+      
+                  <div class="carousel-focus flex items-center flex-col relative bg-slate-100 mx-5 my-10 px-4 py-3 rounded-lg shadow-xl" style="width: 270px;">
+                      <!-- <svg class="fill-current text-primary-two hover:text-primary-one cursor-pointer h-12 w-12 absolute top-0 right-0 mt-2 -mr-5" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11.5 0C17.847 0 23 5.153 23 11.5S17.847 23 11.5 23 0 17.847 0 11.5 5.153 0 11.5 0zm0 1C17.295 1 22 5.705 22 11.5S17.295 22 11.5 22 1 17.295 1 11.5 5.705 1 11.5 1zm.5 10h6v1h-6v6h-1v-6H5v-1h6V5h1v6z"/></svg> -->
+                      <!-- <button class="absolute top-0 right-0 bg-black px-1 py-0 font-bold text-lg">+</button> -->
+                      
+                      <img class="h-16 w-16 rounded-full shadow-2xl" src="https://pbs.twimg.com/profile_images/830533062807191552/TbkWKnnv_400x400.jpg" alt="Img">
+                      <span class="text-primary-two font-bold text-xl mt-3">Sup3r-Us3r</span>
+                      <p class="mt-3 text-gray-600 text-center">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quibusdam!"</p>
+                      <button class="mt-4 mb-2 bg-black px-12 py-1 text-gray-100 font-semibold hover:bg-primary-two focus:outline-none">Button</button>
+                  </div>
+              </div>
+      
+          </div>
+          
+        </div>
+    </div>
+
+    <!-- cost -->
+    <section class="bg-cost-bg bg-no-repeat bg-cover bg-bottom h-full py-10 px-8">
+    <div class="container grid grid-cols-1 md:grid-cols-2 mx-auto lg:px-20">
+      <div>
+      <h4 class="text-white font-bold text-xl">How much will my paper cost?</h4>
+
+     <div class="bg-white px-8 py-8 mt-8">
+       <div class="flex flex-col md:flex-row space-x-8">
+
+      <select id="academic_level" name="academic_level" class="get-fare w-3/4 text-gray-700 rounded border border-gray-300 bg-white  focus:border-primary-light focus:ring-2  text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ">
+        <option hidden="" value="0" disabled="" selected="">Essay type</option>
+        <option value="1">
+                College
+        </option>
+        <option value="2">
+            Undergraduate
+        </option>
+        <option value="3">
+          Undergraduate
+        </option>
+      </select>
+
+      <input type="text" name="name" class="w-1/5 text-white rounded border border-gray-300 bg-gray-50  focus:border-pink-500 focus:ring-2 focus:ring-red-200 text-base h-12 outline-none py-2 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="pages">
+     </div>
+
+      <div class="rounded border mx-auto mt-4">
+        <!-- Tabs -->
+        <ul id="tabs" class="inline-flex pt-2 px-1 w-full border-b mx-auto">
+          <li class="bg-white px-4 text-gray-800 font-semibold py-2 rounded-t border-t border-r border-l -mb-px"><a id="default-tab" href="#first">School</a></li>
+          <li class="px-4 text-gray-800 font-semibold py-2 rounded-t"><a href="#second">College</a></li>
+          <li class="px-4 text-gray-800 font-semibold py-2 rounded-t"><a href="#third">University</a></li>
+        </ul>
+      
+        <!-- Tab Contents -->
+        <div id="tab-contents">
+          <div id="first" class="p-4">
+            First tab
+          </div>
+          <div id="second" class="hidden p-4">
+            Second tab
+          </div>
+          <div id="third" class="hidden p-4">
+            Third tab
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row lg:space-x-8 space-y-4 mt-4">
+        <h4 class="lg:w-[37%] text-sm">Check that we have an 
+          expert for your complex 
+          assignment</h4>
+        
+        <span class="text-sm">Total Price: 30$</span>
+        
+        <a href="#" class="btn btn-primary">Continue to order</a> 
+      </div>
+    
+    </div>
+
+      </div>
+
+      <div class="border-1 bg-white py-16 px-10 mt-16 md:mx-10 md:px-4 lg:px-8 lg:mx-20 my-auto">
+        <h4 class="mb-4 text-lg">Check that we have an 
+          expert for your complex 
+          assignment</h4>
+        <a href="#" class="btn btn-primary">Free Inquiry</a>  
+      </div>
+
+    </div>
+    </section>
+
+    <!-- Services -->
+    <section class="container mx-auto my-8 space-y-6 lg:px-8">
+      <h4 class=" primary-heading ">
+        Types of Services When You Ask Us to “Write My Essay UK”
+      </h4>
+      
+      <p class=" text-primary text-center ">
+        If you're worried that you'll get only specific papers from our platform then know that we have a team of versatile, professional assignment writers UK who 
+        can provide you with any type of papers you want. Here's what we owner:
+      </p> 
+
+      <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 xl:grid-cols-3 py-5 ">
+
+
+          <div class=" border-0 px-9 border-b-2 md:border-r-2  border-primary-two md:p-4">
+          
+            <h4 class="text-primary-one font-bold text-xl pb-3 pt-2">Writing Critical Review</h4>
+            <p class="text-gray-700 text-sm mb-4">
+              Most of the students are unaware of the critical writing structure. This is why our critical writing experts will leave no stone unturned, enabling you to achieve the best grades.
+            </p>
+            
+          </div>
+    
+          <div class="border-0 px-9 border-b-2 sm:px-14 md:border-r-2  border-primary-two md:p-4">
+              <h4 class="text-primary-one font-bold text-xl pb-3 pt-2">Homework writing</h4>
+              <p class="text-gray-700 text-sm mb-4">
+                Homework is not a headache now! You need to just send us the details and our expert writers would love to work on your homework anytime.
+             </p>
+            <div class="invisible lg:visible absolute -ml-8 w-5 h-6 p-4 lg:mt-4 xl:mt-0 bg-white  "></div>
+          </div>
+    
+          <div class="border-0 px-9 border-b-2 sm:px-14  border-primary-two md:p-4">
+              <h4 class="text-primary-one font-bold text-xl py-3 pt-2">Coursework writing</h4>
+              <p class="text-gray-700 text-sm mb-4">
+                This thing is not at all difficult for us, our coursework writing team is intelligent and smart to deal with all your toughest coursework online.
+              </p>
+            <div class="invisible lg:visible absolute -ml-8 lg:mt-8 xl:mt-0 w-5 h-6 p-4 bg-white  "></div>
+          </div>
+    
+          <div class="border-0 px-9 border-b-2 sm:px-14 md:border-r-2  border-primary-two md:p-4">
+            <h4 class="text-primary-one font-bold text-xl pb-3 pt-2">Term paper writing</h4>
+            <p class="text-gray-700 text-sm mb-4">
+              Do you think it’s hard to handle your term paper now? Reach us as soon as possible and we will clear all your confusion. Get it rightly done from our term paper writers.
+           </p>
+          </div>
+    
+          <div class="border-0 px-9 border-b-2 sm:px-14 md:border-r-2  border-primary-two md:p-4">
+            <h4 class="text-primary-one font-bold text-xl pb-3 pt-2">Admission Paper writing</h4>
+            <p class="text-gray-700 text-sm mb-4">
+              Do you think it’s hard to handle your term paper now? Reach us as soon as possible, and we will clear all your confusion. Get it rightly done from our term paper writers.
+           </p>
+            <div class="invisible lg:visible absolute -ml-8 md:mt-8 lg:mt-0 w-5 h-6 p-4 bg-white  "></div>
+          </div>
+    
+          <div class="border-0 px-9 border-b-2 sm:px-14  border-primary-two md:p-4">
+            <h4 class="text-primary-one font-bold text-xl pb-3 pt-2">PPT designing</h4>
+            <p class="text-gray-700 text-sm mb-4">
+              How your presentation is designed does impact your confidence. We at Assignment help UAE design presentations that are highly professional and appealing.
+           </p>
+            <div class="invisible lg:visible absolute -ml-8 w-5 h-6 p-4 bg-white  "></div>
+          </div>
+    
+          <div class="border-0 px-9 border-b-2 sm:px-14 md:border-b-0 md:border-r-2 md:p-4 border-primary-two">
+            
+           <h4 class="text-primary-one font-bold text-xl pb-3 pt-2">Thesis writing</h4>
+            <p class="text-gray-700 text-sm mb-4">
+              The thesis is one of the backbones of the degree which you are pursuing. It is one of the extended research on your major subjects. Our specialized writers in your subject will let you get your degree soon.
+           </p>
+          </div>
+    
+          <div class="border-0 px-9 border-b-2 sm:px-14 md:border-b-0 md:border-r-2 border-primary-two md:p-4">
+            <h4 class="text-primary-one font-bold text-xl py-3 pt-2">Case study writing</h4>
+            <p class="text-gray-700 text-sm mb-4">
+              A case study is not just about answering the question but the implication of appropriate theories and points when required. Here we know the tricks and tips to work on your case study expertly.
+            </p>
+          </div>
+    
+          <div class="border-0 px-9 sm:px-14 md:p-4">
+            
+           <h4 class="text-primary-one font-bold text-xl pb-3 pt-2">Dissertation writing</h4>
+           <p class="text-gray-700 text-sm mb-4">
+             Are you an undergraduate or Master’s Law student? Get in contact with our finest legal writers to get the perfect solution for your assignments.
+             This is another lengthiest part of your qualification process, and it requires a lot of stamina to deal with. Don’t worry! Our writers keep on doing this everyday act will let you get your degree soon.
+         </p>
+          </div>
+    
+      </div>
+
+    </section>
+
+    <!-- Get started -->
+    <section class="bg-getStart-bg bg-no-repeat bg-cover bg-center h-full py-10">
+      <div class="container grid grid-cols-1 md:grid-cols-2 mx-auto px-10 lg:px-44">
+        <div class="mx-auto">
+          <div class="flex flex-col md:flex-row">
+            <div>
+          <span class="rounded-full bg-white py-3 px-5 font-bold">Get 15% OFF </span> </div>
+          <div>
+          <img src="../imgs/boy2.png" class="h-[18rem]"></div>
+          </div> 
+        </div>
+        <div class=" my-auto text-center md:text-left">
+          <p class="font-bold mb-4 text-white text-4xl">Let's Get Started!</p>
+          <p class="mb-6 text-white text-xl">Get 15% OFF your first order</p>
+          <a href="#" class="btn btn-primary">CLAIM MY DISCOUNT </a>  
+        </div>
+      </div>
+    </section>
+  
+    <!-- testimonials -->
+    <section>
+      <h4 class="primary-heading">Testimonials</h4>
+      <div class="container lg:px-36 mx-auto">
+      
+        <div class="grid grid-cols-1 lg:grid-cols-3">
+        
+          <img src="../imgs/tm-boy.png" class="invisible md:visible h-[15rem] mt-[4rem] -ml-[3rem] absolute ">
+          <div class="p-4 my-auto">
+            <div class="h-full bg-gray-100 p-8 rounded shadow-gray-600 shadow-2xl ">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+                <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+              </svg> -->
+              <ul class="flex justify-center mb-4">
+
+                <li class="my-auto ">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                </li>
+                <li class="my-auto">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                </li>
+                <li class="my-auto">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                </li>
+                <li class="my-auto">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                </li>
+                <li class="my-auto">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                </li>
+              </ul>
+              <p class="leading-relaxed mb-6 text-center">- I am delighted with the 
+                service! The writer provided 
+                me with my argumentative 
+                essay completed in just three 
+                hours, and it was of the 
+                highest quality!</p>
+             
+              <p class=" font-medium text-sm text-gray-900 text-right">-Alyssa H., UK</p>
+      
+            </div>
+          </div>
+
+          <div class="p-4 my-auto">
+            <div class="h-full bg-gray-100 p-8 rounded shadow-gray-600 shadow-xl ">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+                <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+              </svg> -->
+              <ul class="flex justify-center mb-4">
+
+                <li class="my-auto ">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                </li>
+                <li class="my-auto">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                </li>
+                <li class="my-auto">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                </li>
+                <li class="my-auto">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                </li>
+                <li class="my-auto">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                </li>
+              </ul>
+              <p class="leading-relaxed mb-6 text-center">- I am delighted with the 
+                service! The writer provided 
+                me with my argumentative 
+                essay completed in just three 
+                hours, and it was of the 
+                highest quality!</p>
+             
+              <p class=" font-medium text-sm text-gray-900 text-right">-Alyssa H., UK</p>
+      
+            </div>
+          </div>
+
+          <div class="p-4 my-auto">
+            <div class="h-full bg-gray-100 p-8 rounded shadow-gray-600 shadow-xl ">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+                <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+              </svg> -->
+              <ul class="flex justify-center mb-4">
+
+                <li class="my-auto ">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                </li>
+                <li class="my-auto">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                </li>
+                <li class="my-auto">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                </li>
+                <li class="my-auto">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                </li>
+                <li class="my-auto">
+                  <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" class="w-4 text-yellow-500 mr-1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                    <path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                    </path>
+                  </svg>
+                </li>
+              </ul>
+              <p class="leading-relaxed mb-6 text-center">- I am delighted with the 
+                service! The writer provided 
+                me with my argumentative 
+                essay completed in just three 
+                hours, and it was of the 
+                highest quality!</p>
+             
+              <p class=" font-medium text-sm text-gray-900 text-right">-Alyssa H., UK</p>
+      
+            </div>
+          </div>
+          <img src="../imgs/tm-girl.png" class="invisible lg:visible h-[15rem] mt-[4rem] mr-[7rem] absolute right-0">
+
+        </div>
+      </div>
+    </section>
+
+     <!-- Just click away -->
+    <section class="py-10">
+      <div class="container grid grid-cols-1 lg:grid-cols-2 mx-auto px-8 lg:px-28">
+
+        <div class=" my-auto">
+          <h4 class="primary-heading">Meet Our Team of Proficient Essay Writers for Hire</h4>
+          <p class="primary-text text-center">Rephrasing Charles Darwin, the father of the evolution theory, we dare to claim that it's not the strongest of 
+            the students, nor the most intelligent that survives college; it is the one that is the most adaptable to the 
+            pressure of the educational process. In that context, EvolutionWriters.com can become your most exective 
+            tool that helps rise up to any writing challenge. This is a next-gen way to adapt to ever-changing academic 
+            requirements, become a better-performing student and, eventually, survive the college! Here is what we offer</p>
+        </div>
+
+        <div class="mx-auto my-auto">
+          <div class="flex flex-col md:flex-row">
+
+            <div class="">
+              <img src="../imgs/boy3.png" class="h-[13rem]">
+            </div>
+
+            <div>
+             <span class="rounded-full bg-gray-700 text-white py-3 px-5 font-bold">Just a click away</span>
+            </div>
+          
+          </div> 
+        </div>
+        
+      </div>
+
+      <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto px-8 lg:px-28 py-14 gap-x-8 gap-y-8">
+        
+        <div>
+        <img src="../imgs/service-icon1.jpg">
+          <h4 class=" font-bold text-lg pb-3 pt-2">100% Original Papers</h4>
+          <p class="text-gray-700 text-sm mb-4">
+            To make sure your paper is entirely
+            unique, we only write from scratch 
+            and then check each piece with 
+            anti-plagiarism software.
+          </p>
+        </div>
+
+        <div>
+          <img src="../imgs/service-icon1.jpg">
+            <h4 class=" font-bold text-lg pb-3 pt-2">No More Missed Deadlines</h4>
+            <p class="text-gray-700 text-sm mb-4">
+              Saving the day by delivering papers 
+              on time is what we do on a regular 
+              basis. Moreover, we can write an 
+              essay in just 3 hours!
+            </p>
+        </div>
+
+        <div>
+            <img src="../imgs/service-icon1.jpg">
+              <h4 class=" font-bold text-lg pb-3 pt-2">Personalized Approach</h4>
+              <p class="text-gray-700 text-sm mb-4">
+                When writing, the assigned expert 
+                closely follows your instructions. 
+                You can also get in touch with him 
+                via secure messaging system.
+              </p>
+        </div>
+
+        <div>
+          <img src="../imgs/service-icon1.jpg">
+            <h4 class=" font-bold text-lg pb-3 pt-2">High Quality & Expertise</h4>
+            <p class="text-gray-700 text-sm mb-4">
+              Having degreed writers in sta with 
+              years of experience in academic 
+              writing ensures the highest quality 
+              of your papers.
+            </p>
+        </div>
+
+        <div>
+          <img src="../imgs/service-icon1.jpg">
+            <h4 class=" font-bold text-lg pb-3 pt-2">100% Original Papers</h4>
+            <p class="text-gray-700 text-sm mb-4">
+              To make sure your paper is entirely
+              unique, we only write from scratch 
+              and then check each piece with 
+              anti-plagiarism software.
+            </p>
+        </div>
+
+        <div>
+          <img src="../imgs/service-icon1.jpg">
+            <h4 class=" font-bold text-lg pb-3 pt-2">No More Missed Deadlines</h4>
+            <p class="text-gray-700 text-sm mb-4">
+              Saving the day by delivering papers 
+              on time is what we do on a regular 
+              basis. Moreover, we can write an 
+              essay in just 3 hours!
+            </p>
+        </div>
+
+        <div>
+            <img src="../imgs/service-icon1.jpg">
+              <h4 class=" font-bold text-lg pb-3 pt-2">Personalized Approach</h4>
+              <p class="text-gray-700 text-sm mb-4">
+                When writing, the assigned expert 
+                closely follows your instructions. 
+                You can also get in touch with him 
+                via secure messaging system.
+              </p>
+        </div>
+
+        <div>
+          <img src="../imgs/service-icon1.jpg">
+            <h4 class=" font-bold text-lg pb-3 pt-2">High Quality & Expertise</h4>
+            <p class="text-gray-700 text-sm mb-4">
+              Having degreed writers in sta with 
+              years of experience in academic 
+              writing ensures the highest quality 
+              of your papers.
+            </p>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Service work -->
+    <section class="px-8">
+      <h4 class="primary-heading">How Does Our Cheap Essay Writing Service Work?</h4>
+
+      <ul class="block w-3/4 md:w-2/5 my-4 mx-auto" x-data="{selected:null}">
+        <li class="flex align-center flex-col border-2 border-primary-one rounded-lg my-2">
+               
+            <h4 @click="selected !== 0 ? selected = 0 : selected = null"
+                class="cursor-pointer px-5 py-3 inline-block rounded-t">Accordion item 1</h4>
+                <div class="absolute -ml-[0.75rem] mt-[0.75rem]"><img src="../imgs/count1.JPG" class="w-5 h-6"></div>  
+               
+            <p x-show="selected == 0" class="border py-4 px-2">
+                This is made with Alpine JS and Tailwind CSS
+            </p>
+        </li>
+
+        <li class="flex align-center flex-col border-2 border-primary-one rounded-lg my-2">
+            <h4 @click="selected !== 1 ? selected = 1 : selected = null"
+                class="cursor-pointer px-5 py-3 inline-block ">Accordion item 2</h4>
+            <div class="absolute -ml-[0.75rem] mt-[0.75rem]"><img src="../imgs/count1.JPG" class="w-5 h-6"></div>  
+            <p x-show="selected == 1" class="border py-4 px-2">
+                 There's no external CSS or JS
+            </p>
+        </li>
+
+        <li class="flex align-center flex-col border-2 border-primary-one rounded-lg my-2">
+            <h4 @click="selected !== 2 ? selected = 2 : selected = null"
+                :class="{'cursor-pointer px-5 py-3 inline-block ': true, 'rounded-b': selected != 2}">Accordion item 3</h4>
+                <div class="absolute -ml-[0.75rem] mt-[0.75rem]"><img src="../imgs/count1.JPG" class="w-5 h-6"></div>  
+            <p x-show="selected == 2" :class="{'border py-4 px-2': true, 'rounded-b': selected == 2}">
+                Pretty cool huh?
+            </p>
+        </li>
+    </ul>
+
+    </section>
+
+     <!-- FAQ -->
+     <section>
+      <h4 class="primary-heading">FAQ'S</h4>
+      <p class=" text-primary text-center ">
+        Still have concerns about our services? Here are the answers:
+      </p> 
+      <div class=" pt-3 pb-14 mx-auto bg-wavesbg bg-cover bg-no-repeat">
+        <div class="container mx-auto sm:mb-2 px-5 md:px-0 lg:w-4/5 ">
+            <div class="w-full">
+                <details class="mb-3 relative">
+                    <summary class="cursor-pointer font-semibold w-full text-gray-600 rounded-xl lg:rounded-full border border-gray-300 bg-white  focus:border-primary-one text-base py-2 px-3 leading-8 mb-1">
+                         Do you write assignments from scratch or reuse the previous ones?
+                    </summary>
+                    <div class="bg-white p-4 rounded-sm">
+                        <span class="text-gray-500 text-sm">
+                            At assignmentshelp.ae every order is served from the scratch. We write assignments specific
+                            to your requirements and never reuse any past assignments. Also, experts vary according to
+                            the topics to make the best assignment help online available for you.
+                        </span>
+                    </div>
+                </details>
+                <details class="mb-4 relative">
+                    <summary class="cursor-pointer font-semibold w-full text-gray-600 rounded-xl lg:rounded-full border border-gray-300 bg-white  focus:border-primary-one text-base py-2 px-3 leading-8 mb-1">
+                         How many revisions do you provide in an assignment?
+                    </summary>
+                    <div class="bg-white p-4 rounded-sm">
+                        <span class="text-gray-500 text-sm">
+                            First, we make sure our writing services in UAE cater to all types of requirements with
+                            perfection. Still, if there’s room for improvement (that doesn’t happen usually) we can
+                            revise and edit the papers for you. In total, we offer 3 revisions to gain the satisfaction
+                            you expect from us.
+                        </span>
+                    </div>
+                </details>
+                <details class="mb-4 relative">
+                    <summary class="cursor-pointer font-semibold w-full text-gray-600 rounded-xl lg:rounded-full border border-gray-300 bg-white  focus:border-primary-one text-base py-2 px-3
+                        leading-8 mb-1">
+                         Is this the best assignment website that’s also affordable?
+                    </summary>
+                    <div class="bg-white p-4 rounded-sm">
+                        <span class="text-gray-500 text-sm">
+                            This is for you to decide but as compared to other websites our prices are reasonably low.
+                            And when it terms to quality and research-driven assignments, we must say our writers' rules
+                            this feature. It's the results and success that brings the customers again to our website.
+                        </span>
+                    </div>
+                </details>
+                <details class="mb-4 relative">
+                    <summary class="cursor-pointer font-semibold w-full text-gray-600 rounded-xl lg:rounded-full border border-gray-300 bg-white  focus:border-primary-one text-base py-2 px-3 leading-8 mb-1">
+                      Will my identity remain private with you?
+                    </summary>
+                    <div class="bg-white p-4 rounded-sm">
+                        <span class="text-gray-500 text-sm">
+                            Yes, all the time. You can trust us for that. We only use your information to complete your
+                            assignments and deliver them on time. We neither disclose your information to anyone nor use
+                            it for advertisement. That’s our guarantee!
+                        </span>
+                    </div>
+                </details>
+                <details class="mb-4 relative">
+                    <summary class="cursor-pointer font-semibold w-full text-gray-600 rounded-xl lg:rounded-full border border-gray-300 bg-white  focus:border-primary-one text-base py-2 px-3 leading-8 mb-1">
+                         Do you guarantee quality with cheap assignment help UAE?
+                    </summary>
+                    <div class="bg-white p-4 rounded-sm">
+                        <span class="text-gray-500 text-sm">
+                            Providing cheap services doesn’t mean we compromise on quality. Both remain equal for us.
+                            The mission is to help students relieve their stress without letting them pay a lot for
+                            assignment writing services Dubai.
+                        </span>
+                    </div>
+                </details>
+                <details class="mb-4 relative">
+                    <summary class="cursor-pointer font-semibold w-full text-gray-600 rounded-xl lg:rounded-full border border-gray-300 bg-white  focus:border-primary-one text-base py-2 px-3 leading-8 mb-1">
+                        Do you have any expert assignment maker Dubai online in your team?
+                    </summary>
+                    <div class="bg-white p-4 rounded-sm">
+                        <span class="text-gray-500 text-sm">
+                            We have experts available on different topics, you name it and we will connect you with
+                            them. If you’re looking specifically for expert assignment writers then we are the go-to
+                            palace for you. From PhD writers to dissertation, academic, essays, and assignments, our
+                            team serves in all categories.
+                        </span>
+                    </div>
+                </details>
+            </div>
+
+        </div>
+      </div>
+     </section>
+
+    <!-- Footer -->
+    <footer class=" bg-gradient-to-r from-purple-900 to-orange-700">
+
+      <div class="container lg:px-9 lg:py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+  
+          <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 ">
+
+            <div class="grid grid-cols-1 text-center md:text-left sm:grid-cols-1 lg:grid-cols-3 pt-5 gap-y-4 mx-auto md:mx-0">
+    
+                <div class="lg:px-8">
+                    <img src="../imgs/flogo.png" class="h-20">
+                    <p class=" text-primary text-white">
+                      @2022-CheapReliableEssay-All Rights Reserved.
+                    </p> 
+                </div>
+
+                <div class="lg:px-8">
+                  <select id="academic_level" name="academic_level" class="get-fare w-full text-gray-700 rounded border border-gray-300 bg-white  focus:border-primary-light focus:ring-2  text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ">
+                    <option hidden="" value="0" disabled="" selected="">Other Services</option>
+                    <option value="1">
+                            College
+                    </option>
+                    <option value="2">
+                        Undergraduate
+                    </option>
+                    <option value="3">
+                      Undergraduate
+                    </option>
+                  </select>
+                </div>
+
+                <div class="lg:px-8">
+                  <select id="academic_level" name="academic_level" class="get-fare w-full text-gray-700 rounded border border-gray-300 bg-white  focus:border-primary-light focus:ring-2  text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ">
+                    <option hidden="" value="0" disabled="" selected="">Other Services</option>
+                    <option value="1">
+                            College
+                    </option>
+                    <option value="2">
+                        Undergraduate
+                    </option>
+                    <option value="2">
+                      Undergraduate
+                    </option>
+                  </select>
+                </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 text-center md:text-left sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 pt-5 gap-x-4 mx-auto md:mx-0 ">
+
+                <div class="px-4">
+                    <select id="academic_level" name="academic_level" class="get-fare w-full rounded border border-gray-300 bg-transparent focus:border-primary-light focus:ring-2 text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out ">
+                      <option hidden="" value="0" disabled="" selected="">Other Services</option>
+                      <option value="1">
+                              College
+                      </option>
+                      <option value="2">
+                          Undergraduate
+                      </option>
+                      <option value="2">
+                        Undergraduate
+                      </option>
+                    </select>
+
+                  <span class="inline-flex pt-8 space-x-5">
+                    <a href="" class="text-white ">
+                      <img src="../imgs/fb.svg" class="h-8">
+                    </a>
+
+                    <a href="" class="text-white ">
+                      <img src="../imgs/insta.svg" class="h-8">
+                    </a>
+
+                    <a href="" class="text-white ">
+                      <img src="../imgs/fb.svg" class="h-8">
+                    </a>
+
+                    <a href="" class="text-white ">
+                      <img src="../imgs/insta.svg" class="h-8">
+                    </a>
+                  </span>
+
+                  <span class="inline-flex pt-8 space-x-4">
+                    <a href="" class="text-white ">
+                      <img src="../imgs/visa.svg" class="h-8">
+                    </a>
+
+                    <a href="" class="text-white ">
+                      <img src="../imgs/visa.svg" class="h-8">
+                    </a>
+
+                    <a href="" class="text-white ">
+                      <img src="../imgs/visa.svg" class="h-8">
+                    </a>
+
+                  </span>
+
+                </div>
+
+                <div class="px-4 ">
+                    <h4 class="text-2xl title-font font-medium text-white mb-3">Others</h4>
+                    <ul class="list-none mb-10">
+                        <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">Home</a></li>
+                        <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">About</a></li>
+                        <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">Services</a></li>
+                        <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">Contact</a></li>
+                        <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">Reviews</a></li>
+                        <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">Order Now</a></li>
+                    </ul>
+                </div>
+
+                <div class="px-4 ">
+                  <h4 class="text-2xl title-font font-medium text-white mb-3">Others</h4>
+                  <ul class="list-none mb-10">
+                      <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">Home</a></li>
+                      <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">About</a></li>
+                      <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">Services</a></li>
+                      <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">Contact</a></li>
+                      <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">Reviews</a></li>
+                      <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">Order Now</a></li>
+                  </ul>
+                </div>
+
+                <div class="px-4 ">
+                  <h4 class="text-2xl title-font font-medium text-white mb-3">Others</h4>
+                  <ul class="list-none mb-10">
+                      <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">Home</a></li>
+                      <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">About</a></li>
+                      <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">Services</a></li>
+                      <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">Contact</a></li>
+                      <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">Reviews</a></li>
+                      <li class="py-1"><a href="#" class="text-white hover:text-gray-300 text-md">Order Now</a></li>
+                  </ul>
+                </div>
+            </div>
+    
+          </div>
+   
+      </div>
+     
+    </footer>
+
+    <script>
+      let tabsContainer = document.querySelector("#tabs");
+
+let tabTogglers = tabsContainer.querySelectorAll("#tabs a");
+
+console.log(tabTogglers);
+
+tabTogglers.forEach(function(toggler) {
+  toggler.addEventListener("click", function(e) {
+    e.preventDefault();
+
+    let tabName = this.getAttribute("href");
+
+    let tabContents = document.querySelector("#tab-contents");
+
+    for (let i = 0; i < tabContents.children.length; i++) {
+      
+      tabTogglers[i].parentElement.classList.remove("border-t", "border-r", "border-l", "-mb-px", "bg-white");  tabContents.children[i].classList.remove("hidden");
+      if ("#" + tabContents.children[i].id === tabName) {
+        continue;
+      }
+      tabContents.children[i].classList.add("hidden");
+      
+    }
+    e.target.parentElement.classList.add("border-t", "border-r", "border-l", "-mb-px", "bg-white");
+  });
+});
+
+    </script>
+</body>
+</html>
