@@ -7,9 +7,15 @@
     <title>Document</title>
     <link href="../dist/output.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-
+    
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+
+   
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 
     <style>
       @keyframes carouselAnim {
@@ -67,7 +73,7 @@
         <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-2 mx-auto lg:items-center lg:justify-between lg:flex-row ">
             <div class="p-4 flex flex-row items-center justify-between">
                 <a class="flex items-center py-4 px-2" href="#">
-                    <img src="../imgs/logo.jpg" alt="Logo" class="h-16 mt-3">
+                    <img src="../imgs/logo.png" alt="Logo" class="h-16 mt-3">
                 </a>
                 <button class="lg:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
                     <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
@@ -104,20 +110,20 @@
     </div>
 
     <!-- Hero -->
-    <div class="h-full mx-auto px-5 bg-hero-bg bg-no-repeat bg-cover">    
+    <div class="h-full mx-auto px-5 bg-hero-bgwaves lg:bg-hero-bg bg-no-repeat lg:bg-cover 3xl:bg-none">    
 
-       <div class=" pt-44 flex flex-col items-center justify-center lg:flex-row lg:space-x-20">
+       <div class="container mx-auto pt-44 flex flex-col items-center justify-center lg:flex-row lg:space-x-20">
 
           <div class="hidden md:block w-[50%]"></div>
          
           <div class="flex flex-col mb-16 items-center text-center lg:flex-grow lg:w-[40%] lg:text-left lg:mb-0 ">
-            <div class="md:w-1/2 lg:w-full">
+            <div class="md:px-20 lg:px-0 lg:w-full">
               <h1 class="text-black-500 text-2xl md:text-3xl lg:text-4xl font-bold pb-4">Cheap Essay Writing 
                 Service That Bypasses 
                 Competitors in Its 
                 Affordabilit</h1>
       
-              <p class="text-black text-2xl md:text-lg lg:text-base pb-4">Get cheap essay help here. You don’t need to worry about spending all of 
+              <p class="primary-text pb-4">Get cheap essay help here. You don’t need to worry about spending all of 
                 your money on writing services anymore — hire one of our experienced 
                 writers and get help with any paper type! Our assistance is cheaper than 
                 affordable to any student. Check out our amazing reduced prices!</p>
@@ -243,23 +249,23 @@
             </div>
           </div>
       
-          <div class=" lg:w-[70%]">
+          <div class="bg-hero-bg2 bg-no-repeat bg-cover bg-center w-full lg:bg-none lg:w-[70%]">
       
-          <form class="primary-color shadow-2xl p-8 flex flex-col md:ml-auto w-full relative z-10  mb-16">
+          <form class="bg-gradient-to-r from-purple-900 shadow-2xl p-8 flex flex-col md:ml-auto w-[70%] mx-auto lg:w-full relative z-10  mb-16" style="background-color: rgb(170, 21, 16, 0.5);">
       
-            <p class="pb-4">Order your paper</p>
+            <p class="pb-4 text-white">Order your paper</p>
               <div class="relative mb-4">
-                <label>Name:</label>
+                <label class="text-white">Name:</label>
                 <input type="text" name="name" class="w-full text-white rounded border border-gray-300 bg-gray-50  focus:border-pink-500 focus:ring-2 focus:ring-red-200 text-base h-12 outline-none py-2 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="Full Name">
               </div>
       
               <div class="relative mb-4">
-                <label>Email:</label>
+                <label class="text-white">Email:</label>
                 <input type="text" name="email" class="w-full text-gray-700 rounded border border-gray-300 bg-gray-50  focus:border-pink-500 focus:ring-2 focus:ring-red-200 text-base h-12 outline-none py-2 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="Email">
               </div>
       
               <div class="relative mb-4">
-                <label>Phone Number:</label>
+                <label class="text-white">Phone Number:</label>
                 <input type="tel" name="phone" class="w-full text-gray-700 rounded border border-gray-300 bg-gray-50  focus:border-pink-500 focus:ring-2 focus:ring-red-200 text-base h-12 outline-none py-2 px-3 leading-8 transition-colors duration-200 ease-in-out" placeholder="Phone Number">
               </div>
 
@@ -280,7 +286,7 @@
     <div class="primary-color h-4"></div>
 
     <!-- Section2 -->
-    <div class=" grid grid-cols-1 sm:grid-cols-2 mx-auto py-10 lg:px-[22rem]">
+    <div class="container grid grid-cols-1 sm:grid-cols-2 mx-auto py-10 lg:px-[22rem]">
       
       <div class="mx-auto">
         <img src="../imgs/boy.svg" class="h-80">
@@ -332,11 +338,104 @@
     </div>
 
     <!-- Testimonial -->
-    <div class="px-4 lg:px-40">
+    <div class="container mx-auto px-4 lg:px-40">
       <h4 class="primary-heading">Meet Our Team of Proficient Essay Writers for Hire</h4>
       <p class="primary-text text-center">When it comes to looking for essay help online, every student aspires to any top writer to curate their essays and papers. Scroll 
         through the writer's profile to check what their satisfied customers say about them to get a clear view of their service</p>
+       
+        <!-- Swiper Slider -->
 
+        <!-- <div class="container mx-auto mt-20 swiper mySwiper">
+          <div class="mb-16 swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="p-4 text-gray-800 rounded-lg shadow-md">
+                    <div class="mb-2">
+                      <p class="mb-2 text-center text-gray-600 ">
+                       " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sapiente iusto esse. "
+                      </p>
+                      <div class="flex flex-col items-center justify-center">
+                        <div class="w-12 h-12 overflow-hidden bg-gray-100 border-2 border-indigo-100 rounded-full">
+                          <img src="https://cdn.pixabay.com/photo/2017/05/19/12/38/entrepreneur-2326419__340.jpg" alt="img" class="object-cover object-center w-full h-full" />
+                        </div>
+                      <h5 class="font-bold text-indigo-600">John Doe</h5>
+                      <p class="text-sm text-gray-600">CEO / Founder</p>
+                    </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p-4 text-gray-800 rounded-lg shadow-md">
+                    <div class="mb-2">
+                      <p class="mb-2 text-center text-gray-600 ">
+                       " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sapiente iusto esse. "
+                      </p>
+                      <div class="flex flex-col items-center justify-center">
+                        <div class="w-12 h-12 overflow-hidden bg-gray-100 border-2 border-indigo-100 rounded-full">
+                          <img src="https://cdn.pixabay.com/photo/2017/05/19/12/38/entrepreneur-2326419__340.jpg" alt="img" class="object-cover object-center w-full h-full" />
+                        </div>
+                      <h5 class="font-bold text-indigo-600">John Doe</h5>
+                      <p class="text-sm text-gray-600">CEO / Founder</p>
+                    </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p-4 text-gray-800 rounded-lg shadow-md">
+                    <div class="mb-2">
+                      <p class="mb-2 text-center text-gray-600 ">
+                       " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sapiente iusto esse. "
+                      </p>
+                      <div class="flex flex-col items-center justify-center">
+                        <div class="w-12 h-12 overflow-hidden bg-gray-100 border-2 border-indigo-100 rounded-full">
+                          <img src="https://cdn.pixabay.com/photo/2017/05/19/12/38/entrepreneur-2326419__340.jpg" alt="img" class="object-cover object-center w-full h-full" />
+                        </div>
+                      <h5 class="font-bold text-indigo-600">John Doe</h5>
+                      <p class="text-sm text-gray-600">CEO / Founder</p>
+                    </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p-4 text-gray-800 rounded-lg shadow-md">
+                    <div class="mb-2">
+                      <p class="mb-2 text-center text-gray-600 ">
+                       " Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique sapiente iusto esse. "
+                      </p>
+                      <div class="flex flex-col items-center justify-center">
+                        <div class="w-12 h-12 overflow-hidden bg-gray-100 border-2 border-indigo-100 rounded-full">
+                          <img src="https://cdn.pixabay.com/photo/2017/05/19/12/38/entrepreneur-2326419__340.jpg" alt="img" class="object-cover object-center w-full h-full" />
+                        </div>
+                      <h5 class="font-bold text-indigo-600">John Doe</h5>
+                      <p class="text-sm text-gray-600">CEO / Founder</p>
+                    </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div> -->
+    
+        <!-- Swiper JS -->
+
+        <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     -->
+        <!-- Initialize Swiper -->
+        
+        <!-- <script>
+          var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            grid: {
+              rows: 1,
+            },
+            spaceBetween: 30,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+          });
+        </script> -->
+
+        <!-- auto slider -->
         <div class="leanding-normal tracking-wide">
 
           <div class="container mx-auto w-full overflow-hidden relative">
@@ -616,11 +715,13 @@
     <!-- testimonials -->
     <section>
       <h4 class="primary-heading">Testimonials</h4>
-      <div class="container lg:px-36 mx-auto">
-      
+      <div class="container relative lg:px-36 mx-auto">
+        <img src="../imgs/tm-boy.png" class="invisible md:visible h-[15rem] mt-[4rem] -ml-[3rem] absolute ">
+        <img src="../imgs/tm-girl.png" class="invisible lg:visible h-[15rem] mt-[4rem] mr-[5rem] absolute right-0 ">
+
         <div class="grid grid-cols-1 lg:grid-cols-3">
         
-          <img src="../imgs/tm-boy.png" class="invisible md:visible h-[15rem] mt-[4rem] -ml-[3rem] absolute ">
+          
           <div class="p-4 my-auto">
             <div class="h-full bg-gray-100 p-8 rounded shadow-gray-600 shadow-2xl ">
               <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
@@ -770,8 +871,7 @@
       
             </div>
           </div>
-          <img src="../imgs/tm-girl.png" class="invisible lg:visible h-[15rem] mt-[4rem] mr-[7rem] absolute right-0">
-
+          
         </div>
       </div>
     </section>
@@ -808,7 +908,7 @@
       <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto px-8 lg:px-28 py-14 gap-x-8 gap-y-8">
         
         <div>
-        <img src="../imgs/service-icon1.jpg">
+        <img src="../imgs/service-icon1.svg" class="w-16">
           <h4 class=" font-bold text-lg pb-3 pt-2">100% Original Papers</h4>
           <p class="text-gray-700 text-sm mb-4">
             To make sure your paper is entirely
@@ -819,7 +919,7 @@
         </div>
 
         <div>
-          <img src="../imgs/service-icon1.jpg">
+          <img src="../imgs/service-icon2.svg" class="w-16">
             <h4 class=" font-bold text-lg pb-3 pt-2">No More Missed Deadlines</h4>
             <p class="text-gray-700 text-sm mb-4">
               Saving the day by delivering papers 
@@ -830,7 +930,7 @@
         </div>
 
         <div>
-            <img src="../imgs/service-icon1.jpg">
+            <img src="../imgs/service-icon3.svg" class="w-16">
               <h4 class=" font-bold text-lg pb-3 pt-2">Personalized Approach</h4>
               <p class="text-gray-700 text-sm mb-4">
                 When writing, the assigned expert 
@@ -841,7 +941,7 @@
         </div>
 
         <div>
-          <img src="../imgs/service-icon1.jpg">
+          <img src="../imgs/service-icon4.svg" class="w-16">
             <h4 class=" font-bold text-lg pb-3 pt-2">High Quality & Expertise</h4>
             <p class="text-gray-700 text-sm mb-4">
               Having degreed writers in sta with 
@@ -852,7 +952,7 @@
         </div>
 
         <div>
-          <img src="../imgs/service-icon1.jpg">
+          <img src="../imgs/service-icon5.svg" class="w-16">
             <h4 class=" font-bold text-lg pb-3 pt-2">100% Original Papers</h4>
             <p class="text-gray-700 text-sm mb-4">
               To make sure your paper is entirely
@@ -863,7 +963,7 @@
         </div>
 
         <div>
-          <img src="../imgs/service-icon1.jpg">
+          <img src="../imgs/service-icon6.svg" class="w-16">
             <h4 class=" font-bold text-lg pb-3 pt-2">No More Missed Deadlines</h4>
             <p class="text-gray-700 text-sm mb-4">
               Saving the day by delivering papers 
@@ -874,7 +974,7 @@
         </div>
 
         <div>
-            <img src="../imgs/service-icon1.jpg">
+            <img src="../imgs/service-icon7.svg" class="w-16">
               <h4 class=" font-bold text-lg pb-3 pt-2">Personalized Approach</h4>
               <p class="text-gray-700 text-sm mb-4">
                 When writing, the assigned expert 
@@ -885,7 +985,7 @@
         </div>
 
         <div>
-          <img src="../imgs/service-icon1.jpg">
+          <img src="../imgs/service-icon8.svg" class="w-16">
             <h4 class=" font-bold text-lg pb-3 pt-2">High Quality & Expertise</h4>
             <p class="text-gray-700 text-sm mb-4">
               Having degreed writers in sta with 
@@ -899,7 +999,7 @@
     </section>
 
     <!-- Service work -->
-    <section class="px-8">
+    <section class="container mx-auto px-8">
       <h4 class="primary-heading">How Does Our Cheap Essay Writing Service Work?</h4>
 
       <ul class="block w-3/4 md:w-2/5 my-4 mx-auto" x-data="{selected:null}">
@@ -907,7 +1007,7 @@
                
             <h4 @click="selected !== 0 ? selected = 0 : selected = null"
                 class="cursor-pointer px-5 py-3 inline-block rounded-t">Accordion item 1</h4>
-                <div class="absolute -ml-[0.75rem] mt-[0.75rem]"><img src="../imgs/count1.JPG" class="w-5 h-6"></div>  
+                <div class="absolute -ml-[0.75rem] mt-[0.55rem]"><img src="../imgs/count1.png" class="w-6 h-7"></div>  
                
             <p x-show="selected == 0" class="border py-4 px-2">
                 This is made with Alpine JS and Tailwind CSS
@@ -917,7 +1017,7 @@
         <li class="flex align-center flex-col border-2 border-primary-one rounded-lg my-2">
             <h4 @click="selected !== 1 ? selected = 1 : selected = null"
                 class="cursor-pointer px-5 py-3 inline-block ">Accordion item 2</h4>
-            <div class="absolute -ml-[0.75rem] mt-[0.75rem]"><img src="../imgs/count1.JPG" class="w-5 h-6"></div>  
+            <div class="absolute -ml-[0.75rem] mt-[0.55rem]"><img src="../imgs/count2.png" class="w-6 h-7"></div>  
             <p x-show="selected == 1" class="border py-4 px-2">
                  There's no external CSS or JS
             </p>
@@ -926,11 +1026,20 @@
         <li class="flex align-center flex-col border-2 border-primary-one rounded-lg my-2">
             <h4 @click="selected !== 2 ? selected = 2 : selected = null"
                 :class="{'cursor-pointer px-5 py-3 inline-block ': true, 'rounded-b': selected != 2}">Accordion item 3</h4>
-                <div class="absolute -ml-[0.75rem] mt-[0.75rem]"><img src="../imgs/count1.JPG" class="w-5 h-6"></div>  
+                <div class="absolute -ml-[0.75rem] mt-[0.75rem]"><img src="../imgs/count3.png" class="w-6 h-7"></div>  
             <p x-show="selected == 2" :class="{'border py-4 px-2': true, 'rounded-b': selected == 2}">
                 Pretty cool huh?
             </p>
         </li>
+
+        <li class="flex align-center flex-col border-2 border-primary-one rounded-lg my-2">
+          <h4 @click="selected !== 1 ? selected = 1 : selected = null"
+              class="cursor-pointer px-5 py-3 inline-block ">Accordion item 2</h4>
+          <div class="absolute -ml-[0.75rem] mt-[0.55rem]"><img src="../imgs/count4.png" class="w-6 h-7"></div>  
+          <p x-show="selected == 1" class="border py-4 px-2">
+               There's no external CSS or JS
+          </p>
+      </li>
     </ul>
 
     </section>
@@ -1099,21 +1208,21 @@
                     </a>
 
                     <a href="" class="text-white ">
-                      <img src="../imgs/fb.svg" class="h-8">
+                      <img src="../imgs/twitter.svg" class="h-8">
                     </a>
 
                     <a href="" class="text-white ">
-                      <img src="../imgs/insta.svg" class="h-8">
+                      <img src="../imgs/youtube.svg" class="h-8">
                     </a>
                   </span>
 
                   <span class="inline-flex pt-8 space-x-4">
                     <a href="" class="text-white ">
-                      <img src="../imgs/visa.svg" class="h-8">
+                      <img src="../imgs/amexp.png" class="h-8">
                     </a>
 
                     <a href="" class="text-white ">
-                      <img src="../imgs/visa.svg" class="h-8">
+                      <img src="../imgs/mastercard.png" class="h-8">
                     </a>
 
                     <a href="" class="text-white ">
